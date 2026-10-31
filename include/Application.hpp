@@ -2,6 +2,7 @@
 
 #include "Tableau.hpp"
 #include <QWidget>
+#include <QObject> // Necesario para Q_OBJECT
 
 class QPlainTextEdit;
 class QTableWidget;
@@ -10,8 +11,13 @@ class QTreeWidgetItem;
 class TreeRenderer;
 
 class Application : public QWidget {
+    Q_OBJECT // <--- CRUCIAL: Sin esto, el botón "Analizar" no hará nada
+
 public:
     explicit Application(QWidget* parent = nullptr);
+
+private slots:
+    void analyze(); // Ahora es un slot para poder conectarlo al botón
 
 private:
     QPlainTextEdit* input;
@@ -20,8 +26,6 @@ private:
     QTableWidget* atoms;
     QTreeWidget* tree;
     TreeRenderer* treeView;
-
-    void analyze();
 
     void addNode(
         const TableauNode& node,

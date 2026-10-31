@@ -1,0 +1,6 @@
+
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/CETI_Logo.png</file>
+    </qresource>
+</RCC>

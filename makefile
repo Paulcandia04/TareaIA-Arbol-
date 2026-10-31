@@ -1,12 +1,13 @@
-#    set PATH=C:\msys64\ucrt64\bin;%PATH% & mingw32-make
+#   mingw32-make run
 SHELL := cmd.exe
 .SHELLFLAGS := /C
-
 export PATH := C:\msys64\ucrt64\bin;$(PATH)
 
 PROJECT := TareaIA.pro
 QT_MAKEFILE := Makefile.qt
-EXE := bin\TareaIA.exe
+
+# Aquí le decimos que busque en release, no en bin
+EXE := release\TareaIA.exe
 
 .DEFAULT_GOAL := run
 

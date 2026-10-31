@@ -1,34 +1,33 @@
-QT += widgets
+QT += core gui widgets
 
-TEMPLATE = app
+CONFIG += c++17
+DESTDIR = release
 TARGET = TareaIA
+TEMPLATE = app
 
-CONFIG += c++17 release
-CONFIG -= debug debug_and_release console app_bundle
-
+# Archivos de cabecera (.hpp) en la carpeta include
 INCLUDEPATH += include
 
-DESTDIR = bin
-OBJECTS_DIR = bin/obj
-MOC_DIR = bin/moc
-RCC_DIR = bin/rcc
-UI_DIR = bin/ui
-
-SOURCES += \
-    src/main.cpp \
-    src/Formula.cpp \
-    src/AtomRegistry.cpp \
-    src/Parser.cpp \
-    src/Expansion.cpp \
-    src/Tableau.cpp \
-    src/Application.cpp \
-    src/TreeRenderer.cpp
-
 HEADERS += \
+    include/Application.hpp \
+    include/Parser.hpp \
+    include/Tableau.hpp \
     include/Formula.hpp \
     include/AtomRegistry.hpp \
-    include/Parser.hpp \
     include/Expansion.hpp \
-    include/Tableau.hpp \
-    include/Application.hpp \
     include/TreeRenderer.hpp
+
+# Archivos de código fuente (.cpp) en la carpeta src
+SOURCES += \
+    src/main.cpp \
+    src/Application.cpp \
+    src/Parser.cpp \
+    src/Tableau.cpp \
+    src/Formula.cpp \
+    src/AtomRegistry.cpp \
+    src/Expansion.cpp \
+    src/TreeRenderer.cpp
+
+# Archivo de recursos
+RESOURCES += \
+    resources.qrc

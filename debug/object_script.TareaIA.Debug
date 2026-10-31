@@ -1,0 +1,10 @@
+debug/main.o
+debug/Application.o
+debug/Parser.o
+debug/Tableau.o
+debug/Formula.o
+debug/AtomRegistry.o
+debug/Expansion.o
+debug/TreeRenderer.o
+debug/qrc_resources.o
+debug/moc_Application.o
