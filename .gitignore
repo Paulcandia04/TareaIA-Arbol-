@@ -1,4 +1,20 @@
+# Carpetas de compilación
 bin/
 dist/
+release/
+debug/
+build/
+
+# Archivos generados por Qt
 Makefile.qt
+Makefile.qt.*
 .qmake.stash
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+
+# Archivos binarios del compilador
+*.o
+*.exe
+*.dll
